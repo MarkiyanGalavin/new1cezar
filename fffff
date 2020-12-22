@@ -1,0 +1,12 @@
+alphabet = "abcdefghijklmnopqrstuvwxyzabc0123456789"
+encrypt = str(input("Ведіть повідомлення щоб зашифрувати за шифером Цезаря : "))
+encrypt = encrypt.lower()
+encrypted = ""
+for letter in encrypt:
+     position = alphabet.find(letter)
+     newPosition = position + 3
+     if letter in alphabet:
+          encrypted = encrypted + alphabet[newPosition]
+     else:
+          encrypted = encrypted + letter
+print("Повідомлення зашифроване за шифером Цезаря : ", encrypted)
